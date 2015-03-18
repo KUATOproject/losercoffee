@@ -16,7 +16,7 @@
 <?php wp_head(); ?>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="wp-content/themes/losercoffee/custom.css">
+<link rel="stylesheet" type="text/css" href="wp-content/themes/losercoffee-theme/custom.css">
 </head>
 
 <body <?php body_class(); ?>>
@@ -33,11 +33,7 @@
 
 		<!-- Logo -->
 		<div class="site-branding">
-			<div class="logo">
-				<a href="index.php">
-					<img src="wp-content/themes/losercoffee/img/logo.png" />
-				</a>
-			</div>
+
 		</div><!-- .site-branding -->
 	</header><!-- #masthead -->
 

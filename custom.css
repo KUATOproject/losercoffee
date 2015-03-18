@@ -1,1 +1,169 @@
-*{box-sizing:border-box}html,body{height:100%}body{font-family:sans-serif;font-weight:normal;font-style:normal;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;font-size:17px;color:#885631;margin:0;overflow-x:hidden;line-height:30px}.wrapper{max-width:1920px;margin:0 auto}.inner_wrapper{max-width:1200px;margin:0 auto}.site-footer{background-color:#3b2518;padding:15px}.logo{position:relative;z-index:10001;margin:0 auto;width:100%;text-align:center}a:link,a:visited{color:#3b2518;text-decoration:none}a:hover,a:active,a:focus{text-decoration:underline}h1,h2,h3,h4,h5,h6{font-family:serif;font-weight:normal;font-style:normal}h1{font-size:44px;color:#bbc69a;line-height:44px}h2{font-size:24px;color:#bbc69a;margin:0}.site-footer h2{font-size:26px;color:#885631;text-transform:uppercase}.site-footer a{color:#9a7452}p{padding:15px 0}.main-navigation{position:fixed;z-index:10000;background-color:#9db85a;border-top:1px dashed #fff;border-bottom:1px dashed #fff}.main-navigation li{padding:15px}.main-navigation li a{text-transform:uppercase;color:#fff}.main-navigation li a:hover{color:#3b2518;text-decoration:none}
+/*
+*	=============================================
+*	COLORS
+*	=============================================
+*/
+/*
+*	=============================================
+*	FONTS
+*	=============================================
+*/
+/*
+
+Zum Einbinden von custom fonts:
+
+@font-face {
+    font-family: 'callunaregular';
+    src: url('../fonts/calluna-regular-webfont.eot');
+    src: url('../fonts/calluna-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/calluna-regular-webfont.woff2') format('woff2'),
+         url('../fonts/calluna-regular-webfont.woff') format('woff'),
+         url('../fonts/calluna-regular-webfont.ttf') format('truetype'),
+         url('../fonts/calluna-regular-webfont.svg#callunaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+/*
+*	=============================================
+*	ICONS
+*	=============================================
+*/
+/*
+*	=============================================
+*	LAYOUT STYLES
+*	=============================================
+*/
+/*
+*	=============================================
+*	MIXINS
+*	=============================================
+*/
+/*
+*	=============================================
+*	SITE-SPECIFIC (auslagern)
+*	=============================================
+*/
+/*
+*	%%%%%%%%%%%%%%%%%%%%
+* 	body
+*	%%%%%%%%%%%%%%%%%%%%
+*/
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  font-size: 17px;
+  color: #885631;
+  margin: 0;
+  overflow-x: hidden;
+  line-height: 30px;
+}
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.inner_wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.site-branding {
+  z-index: 10001;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+.site-content {
+  position: relative;
+  margin-top: 60px;
+}
+.site-footer {
+  background-color: #3b2518;
+  padding: 15px;
+}
+/*
+*	%%%%%%%%%%%%%%%%%%%%
+* 	links
+*	%%%%%%%%%%%%%%%%%%%%
+*/
+a:link,
+a:visited {
+  color: #3b2518;
+  text-decoration: none;
+}
+a:hover,
+a:active,
+a:focus {
+  text-decoration: underline;
+}
+/*
+*	%%%%%%%%%%%%%%%%%%%%
+* 	text
+*	%%%%%%%%%%%%%%%%%%%%
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: serif;
+  font-weight: normal;
+  font-style: normal;
+}
+h1 {
+  font-size: 44px;
+  color: #bbc69a;
+  line-height: 44px;
+}
+h2 {
+  font-size: 24px;
+  color: #bbc69a;
+  margin: 0;
+}
+.site-footer h2 {
+  font-size: 26px;
+  color: #885631;
+  text-transform: uppercase;
+}
+.site-footer a {
+  color: #9a7452;
+}
+p {
+  padding: 15px 0;
+}
+/*
+*	%%%%%%%%%%%%%%%%%%%%
+* 	text
+*	%%%%%%%%%%%%%%%%%%%%
+*/
+.main-navigation {
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+  background-color: #9db85a;
+  border-top: 1px dashed white;
+  border-bottom: 1px dashed white;
+  margin-bottom: 15px;
+}
+.main-navigation li {
+  padding: 15px;
+}
+.main-navigation li a {
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.main-navigation li a:hover {
+  color: #3b2518;
+  text-decoration: none;
+}

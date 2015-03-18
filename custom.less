@@ -177,17 +177,21 @@ body {
 	margin:0 auto;
 }
 
-.site-footer {
-	background-color: @color-c4;
-	padding:@space-base;
-}
-
-.logo {
-	position: relative;
+.site-branding {
 	z-index:10001;
 	margin:0 auto;
 	width:100%;
 	text-align: center;
+}
+
+.site-content {
+	position: relative;
+	margin-top:@space-base*4;
+}
+
+.site-footer {
+	background-color: @color-c4;
+	padding:@space-base;
 }
 
 /*
@@ -247,10 +251,12 @@ p {
 */
 .main-navigation {
 	position: fixed;
+	width: 100%;
 	z-index: 10000;
 	background-color: @color-c1;
 	border-top: 1px dashed white;
 	border-bottom: 1px dashed white;
+	margin-bottom: @space-base;
 	& li {
 		padding: @space-base;
 		& a {
