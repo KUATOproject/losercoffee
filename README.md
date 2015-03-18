@@ -1,1 +1,1 @@
-# losercoffee
+# losercoffee-theme
