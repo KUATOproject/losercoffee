@@ -249,25 +249,52 @@ p {
 * 	text
 *	%%%%%%%%%%%%%%%%%%%%
 */
-.main-navigation {
-	position: fixed;
+.mainNavigation {
+	position: relative;
 	width: 100%;
 	z-index: 10000;
 	background-color: @color-c1;
-	border-top: 1px dashed white;
-	border-bottom: 1px dashed white;
 	margin-bottom: @space-base;
+
+	& ul {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+
 	& li {
+		display: inline-block;
 		padding: @space-base;
+
 		& a {
-		text-transform: uppercase;
-		color: @color-base;
-		&:hover {
-			color:@color-c4;
-			text-decoration: none;
+			display: block;
+			//width:150px; wenn nötig fixe Breite angeben
+			text-transform: uppercase;
+			color: @color-base;
+
+			&:hover {
+				color:@color-c4;
+				text-decoration: none;
+			}
 		}
-		}
+	}
+
+	& .logospacer {
+		display: inline;
+		position: absolute;
+		width:200px;
+		height: 200px;
+		background: black;
 	}
 }
 
-
+/*
+*	%%%%%%%%%%%%%%%%%%%%
+* 	header
+*	%%%%%%%%%%%%%%%%%%%%
+*/
+.lc_headerImg {
+	background: url("img/header.jpg") no-repeat;
+	height:400px;
+	background-size: contain;
+}

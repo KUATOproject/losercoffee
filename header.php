@@ -26,9 +26,19 @@
 	<div class="inner_wrapper">
 	<header id="masthead" class="site-header" role="banner">
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+		<nav id="site-navigation" class="mainNavigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php _e( 'Primary Menu', 'losercoffee' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			<ul>
+				<li><a href="">über uns</a></li>
+				<li>test</li>
+				<li><span class="logospacer"></span></li>
+				<li><a href="">über uns</a></li>
+				<li><a href="">über uns</a></li>
+			</ul>
+
+			<!--
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+				-->
 		</nav><!-- #site-navigation -->
 
 		<!-- Logo -->
