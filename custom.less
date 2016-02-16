@@ -1,0 +1,300 @@
+// Custom CSS
+
+/*
+*	=============================================
+*	COLORS
+*	=============================================
+*/
+@color-base: 		rgb(255,255,255);	// weiß
+@color-0: 			rgb(000,000,000);	// schwarz
+@color-c1: 			rgb(157,184,90);		// hellgrün
+@color-c2: 			rgb(143,167,82);		// dunkelgrün
+@color-c3: 			rgb(136,86,49);		// hellbraun
+@color-c4: 			rgb(59,37,24);			// dunkelbraun
+@color-c5: 			rgb(187,198,154);	// pastellgrün
+@color-c6: 			rgb(154,116,82);	// pastellbraun
+/*
+*	=============================================
+*	FONTS
+*	=============================================
+*/
+
+/*
+
+Zum Einbinden von custom fonts:
+
+@font-face {
+    font-family: 'callunaregular';
+    src: url('../fonts/calluna-regular-webfont.eot');
+    src: url('../fonts/calluna-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/calluna-regular-webfont.woff2') format('woff2'),
+         url('../fonts/calluna-regular-webfont.woff') format('woff'),
+         url('../fonts/calluna-regular-webfont.ttf') format('truetype'),
+         url('../fonts/calluna-regular-webfont.svg#callunaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+
+.font-base () {
+	font-family:  serif;
+	font-weight: normal;
+	font-style: normal;
+	}
+.font-sans () {
+	font-family: sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	}
+.font-uppercase () {
+	font-family: sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	}
+.font-FA () {
+	font-family: 'FontAwesome';
+	font-weight: normal;
+	font-style: normal;
+	}
+@fs-base:			17px;
+@fs-large:         	ceil((@fs-base * 1.25)); //
+@fs-small:         	ceil((@fs-base * 0.85)); //
+@fs-h1:            	floor((@fs-base * 2.6)); //
+@fs-h2:            	floor((@fs-base * 1.45)); //
+@fs-h3:            	ceil((@fs-base * 1.7)); //
+@fs-h4:            	ceil((@fs-base * 1.25)); //
+@fs-h5:            	@fs-base;
+@fs-h6:            	ceil((@fs-base * 0.85)); //
+@fs-button:			29px;
+@fs-picnav-date:	43px;
+@fs-picnav-day:	24px;
+@fs-picnav-event:	23px;
+@fs-picnav-link:	20px;
+@fs-footer-h2:	26px;
+@fs-footer-text:	16px;
+@line-height-base:	ceil((@fs-base * 1.75));
+
+/*
+*	=============================================
+*	ICONS
+*	=============================================
+*/
+@icon-button:			"\f101";				// spitze Klammer rechts
+@icon-list:				"\f0c8";				// Quadrat
+@icon-search:			"\f002";				// Lupe
+/*
+*	=============================================
+*	LAYOUT STYLES
+*	=============================================
+*/
+
+// Grid components
+@outer-container:	1920px;
+@inner-container:	1200px;
+@breakpoint-small:  768px;
+@breakpoint-medium: 992px;
+@breakpoint-large:  1200px;
+
+@space-base: 		15px;
+@space-large: 		ceil((@space-base * 2.0));
+@subnav-height: 100px;
+@em-base:			5em;
+@medium-em:		ceil((@em-base * 2.0));
+@large-em:			ceil((@em-base * 3.0));
+@xlarge-em:		ceil((@em-base * 4.0));
+@none-percent: 		0%;
+@small-percent:		25%;
+@onethird-percent: 33%;
+@medium-percent:	50%;
+@twothird-percent: 66%;
+@large-percent:		75%;
+@xlarge-percent:	100%;
+@index-0:			0;
+@index-1:			1000;
+@index-2:			2000;
+@index-3:			3000;
+@index-4:			4000;
+@index-5:			5000;
+@index-6:			6000;
+@index-7:			7000;
+@index-8:			8000;
+@index-9:			9000;
+@index-10:			10000;
+@opacity-strong:	0.25;
+@opacity-medium:	0.5;
+@opacity-light:		0.75;
+@opacity-vlight:	0.9;
+@opacity-none:		1;
+
+/*
+*	=============================================
+*	MIXINS
+*	=============================================
+*/
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+.hyphen () {
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+	}
+
+/*
+*	=============================================
+*	SITE-SPECIFIC (auslagern)
+*	=============================================
+*/
+
+/*
+*	%%%%%%%%%%%%%%%%%%%%
+* 	body
+*	%%%%%%%%%%%%%%%%%%%%
+*/
+*{box-sizing: border-box;}
+
+html, body {height: 100%;}
+
+body {
+	.font-sans ();
+	.hyphen();
+	font-size: @fs-base;
+	color: @color-c3;
+	margin: 0;
+	overflow-x: hidden;
+	line-height: @line-height-base;
+}
+
+.wrapper {
+	max-width:@outer-container;
+	margin: 0 auto;
+}
+
+.inner_wrapper {
+	max-width:@inner-container;
+	margin:0 auto;
+}
+
+.site-branding {
+	z-index:10001;
+	margin:0 auto;
+	width:100%;
+	text-align: center;
+}
+
+.site-content {
+	position: relative;
+	margin-top:@space-base*4;
+}
+
+.site-footer {
+	background-color: @color-c4;
+	padding:@space-base;
+}
+
+/*
+*	%%%%%%%%%%%%%%%%%%%%
+* 	links
+*	%%%%%%%%%%%%%%%%%%%%
+*/
+a {
+	&:link, &:visited {
+		color:@color-c4;
+		text-decoration: none;
+	}
+	&:hover, &:active, &:focus {
+		text-decoration: underline;
+	}
+}
+/*
+*	%%%%%%%%%%%%%%%%%%%%
+* 	text
+*	%%%%%%%%%%%%%%%%%%%%
+*/
+h1, h2, h3, h4, h5, h6 {
+	.font-base ();
+
+}
+h1 {
+	font-size: @fs-h1;
+	color:@color-c5;
+	line-height: @fs-h1;
+	//margin-top:@space-large*2;
+	}
+
+h2 {
+	font-size:@fs-h2;
+	color:@color-c5;
+	margin:0;
+	}
+
+.site-footer h2 {
+	font-size: @fs-footer-h2;
+	color: @color-c3;
+	text-transform: uppercase;
+}
+
+.site-footer a {
+	color: @color-c6;
+}
+
+p {
+	padding: @space-base 0;
+}
+
+/*
+*	%%%%%%%%%%%%%%%%%%%%
+* 	text
+*	%%%%%%%%%%%%%%%%%%%%
+*/
+.mainNavigation {
+	position: relative;
+	width: 100%;
+	z-index: 10000;
+	background-color: @color-c1;
+	margin-bottom: @space-base;
+
+	& ul {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+
+	& li {
+		display: inline-block;
+		padding: @space-base;
+
+		& a {
+			display: block;
+			//width:150px; wenn nötig fixe Breite angeben
+			text-transform: uppercase;
+			color: @color-base;
+
+			&:hover {
+				color:@color-c4;
+				text-decoration: none;
+			}
+		}
+	}
+
+	& .logospacer {
+		display: inline;
+		position: absolute;
+		width:200px;
+		height: 200px;
+		background: black;
+	}
+}
+
+/*
+*	%%%%%%%%%%%%%%%%%%%%
+* 	header
+*	%%%%%%%%%%%%%%%%%%%%
+*/
+.lc_headerImg {
+	background: url("img/header.jpg") no-repeat;
+	height:400px;
+	background-size: contain;
+}
